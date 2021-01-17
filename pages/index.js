@@ -35,9 +35,9 @@ export default function Home() {
                 App movil que permite saber que lugares tienes cerca a tu
                 ubicacion
               </b>
+              <br />
             </p>
           </div>
-          <br />
         </section>
         <section className={styles.objectives}>
           <div>
