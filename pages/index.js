@@ -1,6 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import "semantic-ui-css/semantic.min.css";
+import { Input, TextArea, Button } from "semantic-ui-react";
 
 export default function Home() {
   return (
@@ -35,6 +37,7 @@ export default function Home() {
               </b>
             </p>
           </div>
+          <br />
         </section>
         <section className={styles.objectives}>
           <div>
@@ -87,10 +90,35 @@ export default function Home() {
               <br />
               2) personas dueñas de negocios como restaurantes,
               <br />
-              peluquerias, puestos de comidas, panaderias, tiendas, almacenes de{" "}
+              peluquerias, puestos de comidas, panaderias, tiendas, almacenes de
               <br />
               prendas de vestir, farmacias, etc..
             </p>
+          </div>
+          <div className={styles.feedback}>
+            <p>¿Usarias esta aplicación?</p>
+            <div className={styles.likes}>
+              <img className={styles.imgs} src="/like.svg" />
+
+              <img className={styles.imgs} src="/no-like.svg" />
+            </div>
+            <p>
+              ¿Podrias darme un feedback, de que no te gusto o que quisieras
+              cambiar ?
+            </p>
+            <div className={styles.contact}>
+              <Input
+                className={styles.input}
+                placeholder="email"
+                size="small"
+              />
+              <br />
+              <TextArea className={styles.input} placeholder="Feedback" />
+              <br />
+              <Button secondary size="medium">
+                Enviar
+              </Button>
+            </div>
           </div>
         </section>
       </main>
