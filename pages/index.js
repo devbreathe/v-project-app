@@ -5,6 +5,10 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+      </style>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -16,18 +20,81 @@ export default function Home() {
               <a>v-project-app</a>
             </Link>
           </li>
-          <li>
-            <Link href="/author">
-              <a>About Us</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog/hello-world">
-              <a>Blog Post</a>
-            </Link>
-          </li>
         </ul>
       </nav>
+      <main className={styles.main}>
+        <section className={styles.sectionImage}>
+          <img src="/v-project-app.svg" />
+        </section>
+        <section className={styles.sectionInfo}>
+          <div className={styles.principalText}>
+            <p>
+              <b>
+                App movil que permite saber que lugares tienes cerca a tu
+                ubicacion
+              </b>
+            </p>
+          </div>
+        </section>
+        <section className={styles.objectives}>
+          <div>
+            <div className={styles.title}>
+              <p>
+                A traves de este sitio, pretendo validar una idea de negocio,
+                <br />
+                que consiste en una aplicacion movil que te permite preguntar
+                <br />
+                por algun producto o servicio que necesites y la app te muestre
+                <br />
+                en lugar lo puedes conseguir y que ademas este cerca de tu
+                <br />
+                ubicación.
+              </p>
+            </div>
+            <ul className={styles.ulObjectives}>
+              <li>
+                Ofrecer a los usuarios, variedad de lugares en los que quiera,
+                <br />
+                hacer una compra de algun producto, servicio, tomar una cena o
+                <br />
+                salir con sus amigos.
+              </li>
+              <li>
+                mostrar los diferentes productos y servicios que ofrecen los
+                <br />
+                establecimentos al rededor de donde se en cuentran los usuarios
+                <br />
+                de la app.
+              </li>
+              <li>
+                dar una alternativa de dar visibilidad de los productos o
+                servicios
+                <br />
+                que ofrecen los pequeños y medianos negocios.
+              </li>
+            </ul>
+          </div>
+          <div className={styles.public}>
+            <p>Publico objetivo</p> <br />
+            <p>
+              Estamos enfocados en 2 tipo de publico que posteriormente seran 2
+              <br />
+              tipos de usuarios de la aplicacion
+              <br />
+              1) personas entre los 14 - 65 años que quieran realizar busquedas
+              de <br />
+              productos, servicios cerca de su ubicación.
+              <br />
+              2) personas dueñas de negocios como restaurantes,
+              <br />
+              peluquerias, puestos de comidas, panaderias, tiendas, almacenes de{" "}
+              <br />
+              prendas de vestir, farmacias, etc..
+            </p>
+          </div>
+        </section>
+      </main>
+      <footer className={styles.footer}></footer>
     </div>
   );
 }
