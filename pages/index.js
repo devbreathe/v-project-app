@@ -1,19 +1,20 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import "semantic-ui-css/semantic.min.css";
-import { Input, TextArea, Button } from "semantic-ui-react";
+
+import Feedback from "./component/feedback";
 
 export default function Home() {
   return (
     <div>
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
-      </style>
       <Head>
-        <title>Create Next App</title>
+        <title>v-project-app</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <nav className={styles.nav}>
         <ul className={styles.ul}>
@@ -95,31 +96,7 @@ export default function Home() {
               prendas de vestir, farmacias, etc..
             </p>
           </div>
-          <div className={styles.feedback}>
-            <p>¿Usarias esta aplicación?</p>
-            <div className={styles.likes}>
-              <img className={styles.imgs} src="/like.svg" />
-
-              <img className={styles.imgs} src="/no-like.svg" />
-            </div>
-            <p>
-              ¿Podrias darme un feedback, de que no te gusto o que quisieras
-              cambiar ?
-            </p>
-            <div className={styles.contact}>
-              <Input
-                className={styles.input}
-                placeholder="email"
-                size="small"
-              />
-              <br />
-              <TextArea className={styles.input} placeholder="Feedback" />
-              <br />
-              <Button secondary size="medium">
-                Enviar
-              </Button>
-            </div>
-          </div>
+          <Feedback />
         </section>
       </main>
       <footer className={styles.footer}></footer>
