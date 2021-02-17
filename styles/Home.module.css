@@ -15,6 +15,10 @@
   font-size: 18px;
 }
 
+.a {
+  color: #000;
+}
+
 .sectionImage{
   display: flex;
   justify-content: center;
@@ -22,6 +26,7 @@
 
 .main {
   height: 170vh;
+  font-family: 'Nunito', sans-serif;
 }
 
 
@@ -31,13 +36,11 @@
   font-size: 18px;
 }
 
-.footer {
-  height: 15vh;
-  background-color  : #38B6FF;
-}
+
 
 .objectives{
   height: auto;
+ 
 }
 .title{
   display: flex;
@@ -58,6 +61,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1em;
 }
 
 .feedback{
@@ -81,4 +86,8 @@
 
 .input {
   width: 100%;
+}
+
+.subtitle {
+  font-size: 1.2em;
 }

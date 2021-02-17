@@ -32,6 +32,7 @@ const Feedback = () => {
     post(data)
       .then((res) => {
         setState(true);
+        setData({ email: "", feedback: "" });
       })
       .catch((error) => {
         console.log(error);
@@ -62,35 +63,44 @@ const Feedback = () => {
         ¿Podrias darme un feedback, de que no te gusto o que quisieras cambiar ?
       </p>
       <div className={styles.contact}>
-        <Input
-          className={styles.input}
-          name="email"
-          placeholder="email"
-          size="small"
-          value={data.email}
-          onChange={handleOnChange}
-        />
-        <br />
-        <TextArea
-          className={styles.input}
-          name="feedback"
-          placeholder="Feedback"
-          value={data.feedback}
-          onChange={handleOnChange}
-        />
-        <br />
-        <Button secondary size="medium" onClick={sendData}>
-          Enviar
-        </Button>
+        <div className={styles.container_image}>
+          <img className={styles.img} src="/peopleworking.svg" />
+        </div>
+        <div className={styles.container_group}>
+          <Input
+            className={styles.input}
+            name="email"
+            placeholder="email"
+            size="small"
+            value={data.email}
+            onChange={handleOnChange}
+          />
+          <br />
+          <TextArea
+            className={styles.input}
+            name="feedback"
+            placeholder="Feedback"
+            value={data.feedback}
+            onChange={handleOnChange}
+            rows={4}
+          />
+          <br />
+          <Button fluid secondary onClick={sendData}>
+            Enviar
+          </Button>
+        </div>
       </div>
       <Modal size="small" open={open} onClose={() => setState(false)}>
-        <Modal.Header>Delete Your Account</Modal.Header>
+        <Modal.Header>v-project-app</Modal.Header>
         <Modal.Content>
-          <p>Are you sure you want to delete your account</p>
+          <p>
+            Muchas gracias por tu feedback te estaremos dando mas informacion
+          </p>
         </Modal.Content>
         <Modal.Actions>
-          <Button negative>No</Button>
-          <Button positive>Yes</Button>
+          <Button positive onClick={() => setState(false)}>
+            Gracias
+          </Button>
         </Modal.Actions>
       </Modal>
     </div>

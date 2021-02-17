@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
 import Feedback from "./component/feedback";
+import Footer from "./component/footer";
 
 export default function Home() {
   return (
@@ -15,12 +16,16 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <nav className={styles.nav}>
         <ul className={styles.ul}>
           <li>
             <Link href="/">
-              <a>v-project-app</a>
+              <a className={styles.a}>v-project-app</a>
             </Link>
           </li>
         </ul>
@@ -79,7 +84,7 @@ export default function Home() {
             </ul>
           </div>
           <div className={styles.public}>
-            <p>Publico objetivo</p> <br />
+            <p className={styles.subtitle}>Publico objetivo</p> <br />
             <p>
               Estamos enfocados en 2 tipo de publico que posteriormente seran 2
               <br />
@@ -99,7 +104,7 @@ export default function Home() {
           <Feedback />
         </section>
       </main>
-      <footer className={styles.footer}></footer>
+      <Footer />
     </div>
   );
 }
